@@ -1,0 +1,102 @@
+html, body {
+	margin: 0px;
+	height: 100%;
+}
+
+#sidebar {
+	grid-area: sidebar;
+	/* overflow-y: scroll; */
+}
+
+#content {
+	grid-area: content;
+}
+
+.header {
+	grid-area: header; 
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 10px;
+}
+
+.footer{
+  	grid-area: footer;
+}
+
+.sideBarItem{
+	max-height: 50px;
+	max-width: 50px;
+	padding:5px;
+}
+
+.sideBarItem img{
+	max-height: 50px;
+	max-Width:50px;
+}
+
+.colourPalette{
+	grid-area: colourP;
+	display:flex;
+	flex-direction:grid;
+	flex-flow: wrap;
+}
+
+.options{
+	grid-area: options;
+	padding: 10px;
+}
+
+.colourSwatches{
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+}
+
+.wrapper {
+	display: grid;
+	height: 100%;
+	grid-template-columns: 64px 400px  minmax(600px, 1fr);
+	grid-template-rows: 55px minmax(545px, 1fr) 110px;
+	grid-template-areas:
+			"header header options"
+			"sidebar content content"
+			"sidebar colourP colourP";
+	background-color: #fff;
+	color: #444;
+}
+
+.box {
+	background-color: white;
+	color: #fff;
+	font-size: 150%;
+}
+
+.header {
+	  background-color: black;
+	  padding-left: 20px;
+	  border-bottom: 1px solid gray;
+}
+
+.button {
+
+	background-color: white; /* gray */
+	border: none;
+	color: black;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+	width: 85px;
+	height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.border-right {
+	border-right: solid 1px gray;
+}
+
+.border-top {
+	border-top: solid 1px gray;
+}
